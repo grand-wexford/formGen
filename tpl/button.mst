@@ -1,0 +1,3 @@
+<div class="pure-u-{{col}}-24 {{align}}">
+	<button class="pure-button pure-button-primary {{class}}" data-action="{{action}}" type="button">{{title}}</button>
+</div>

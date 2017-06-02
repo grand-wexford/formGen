@@ -1,0 +1,65 @@
+/* 
+    Created on : 27.04.2017, 11:11:32
+    Author     : grand_wexford
+*/
+
+.buttons-holder {
+    margin-top: 2em;
+}
+
+sup{
+    color: #d31818;
+}
+
+.error-message{
+    color: #cc0033;
+    display: none;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 5px 0 0;
+}
+
+.error label {
+    color: #cc0033;
+}
+
+.error input {
+    background-color: #fce4e4;
+    border: 1px solid #cc0033;
+    outline: none;
+}
+
+.error .error-message {
+    display: block;
+}
+
+.row {
+    margin-bottom: 1em;
+}
+
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}
+
+/*
+pure
+*/
+.pure-form-message{
+    font-size: .775em;
+    /*position: absolute;*/
+}

@@ -1,0 +1,27 @@
+<div>
+	{{#title}}<h2>{{title}}</h2>{{/title}}
+		<section class="tabs">
+			{{#items}}<input class="tab-input nocheck" id="tab_{{index}}" type="radio" name="tab" {{#first}}checked="checked"{{/first}} />{{/items}}
+			{{#hasTabs}}
+					{{#items}}<label class="tab-label" for="tab_{{index}}" data-tab-index="{{index}}" id="tab_l{{index}}">{{name}}</label>{{/items}}
+					<div style="clear:both"></div>
+			{{/hasTabs}}
+			<div class="tabs_cont">
+				{{#items}}
+					<div id="tab_c{{index}}">
+						<form id="tForm{{index}}" class="pure-form pure-form-stacked" name="tForm{{index}}">
+							<fieldset>
+								{{#title}}<legend>{{title}}</legend>{{/title}}
+								<div class="pure-g">
+									{{{form}}}
+									<div class="buttons-holder tab-buttons-{{index}} pure-u-1"></div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+				{{/items}}
+			</div>
+		</section>
+
+	<div class="buttons-holder page-buttons pure-u-1"></div>
+</div>

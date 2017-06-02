@@ -1,0 +1,230 @@
+{
+	"form": {
+		"title": "Название формы",
+		"steps": [
+			{
+				"name": "Tab 1",
+				"title": "Форма для таб 1",
+				"saveUrl": "/tab1_save/",
+				"grid": 3,
+				"buttons": [
+					{
+						"title": "Сохранить таб 1",
+						"action": "save",
+						"align": "right"
+					}
+				],
+				"rows": [
+					{
+						"fields": [
+							{
+								"name": "name",
+								"type": "text",
+								"title": "Имя",
+								"disabled": true,
+								"col": 1,
+								"value": "Петя"
+							},
+							{
+								"name": "middleName",
+								"type": "text",
+								"title": "Отчество",
+								"required": true,
+								"col": 1
+							},
+							{
+								"name": "secondName",
+								"type": "text",
+								"title": "Фамилия",
+								"col": 1
+							}
+						]
+					},
+					{
+						"fields": [
+							{
+								"name": "login",
+								"type": "text",
+								"title": "Логин",
+								"col": 1
+							},
+							{
+								"name": "pass",
+								"type": "password",
+								"title": "Пароль",
+								"value": "123456",
+								"required": true,
+								"col": 2
+							}
+						]
+					},
+					{
+						"fields": [
+							{
+								"name": "email",
+								"type": "email",
+								"title": "Email",
+								"placeholder": "Адрес электронной почты",
+								"col": 2
+							},
+							{
+								"name": "city",
+								"type": "select",
+								"title": "Город",
+								"col": 1,
+								"options": [
+									{
+										"value": ""
+									},
+									{
+										"value": "Рязань"
+									},
+									{
+										"value": "Москва"
+									},
+									{
+										"value": "Самара"
+									},
+									{
+										"value": "Новгород"
+									}
+								]
+							}
+						]
+					},
+					{
+						"fields": [
+							{
+								"name": "tel",
+								"type": "tel",
+								"title": "Телефон",
+								"required": true,
+								"col": 1
+							},
+							{
+								"name": "agree",
+								"disabled": true,
+								"type": "checkbox",
+								"title": "На всё согласен",
+								"col": 2,
+								"required": true,
+								"checked": true,
+								"inRow": true
+							}
+						]
+					},
+					{
+						"fields": [
+							{
+								"name": "street",
+								"type": "select",
+								"title": "Улица",
+								"col": 1,
+								"multiple": true,
+								"size": 4,
+								"options": [
+									{
+										"value": "Рязанская",
+										"default": true
+									},
+									{
+										"value": "Московская"
+									},
+									{
+										"value": "Самарская"
+									},
+									{
+										"value": "Новгородская"
+									}
+								]
+							},
+							{
+								"name": "someText",
+								"type": "textarea",
+								"title": "Сообщение",
+								"col": 2,
+								"value": "",
+								"placeholder": "Напишите своё сообщение тут",
+								"required": true,
+								"rows": 5
+							}
+						]
+					},
+					{
+						"fields": [
+							{
+								"name": "read",
+								"type": "checkbox",
+								"required": true,
+								"title": "Прочитал"
+							}
+						]
+					},
+					{
+						"fields": [
+							{
+								"name": "sex",
+								"type": "radio",
+								"title": "Пол",
+								"options": [
+									{
+										"value": "",
+										"title": "Никакой",
+										"checked": true
+									},
+									{
+										"value": "M",
+										"title": "Мужской"
+									},
+									{
+										"value": "F",
+										"title": "Женский"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+
+			{
+				"name": "Tab 2",
+				"title": "Форма для таб 2",
+				"saveUrl": "/tab2_save/",
+				"buttons": [
+					{
+						"title": "Сохранить таб 2",
+						"action": "save",
+						"align": "right"
+					}
+				],
+				"rows": [
+					{
+						"fields": [
+							{
+								"name": "name2",
+								"type": "text",
+								"title": "Имя2",
+								"required": true
+							}
+						]
+					},
+
+					{
+						"fields": [
+							{
+								"name": "tel2",
+								"type": "tel",
+								"title": "Телефон2"
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"config": {
+		"style": "blue",
+		"tabindex": true
+	}
+}

@@ -1,0 +1,46 @@
+<div class="row {{rowClass}}">
+
+	{{#isText}}
+		<label for="{{name}}">{{title}}{{#required}}<sup>*</sup>{{/required}}</label>
+		<input id="{{name}}" class="{{inputClass}}" name="{{name}}" type="{{type}}" value="{{value}}" {{#disabled}}disabled="disabled"{{/disabled}} {{#placeholder}}placeholder="{{placeholder}}"{{/placeholder}}>
+	{{/isText}}
+
+	{{#isTextarea}}
+		<label for="{{name}}">{{title}}{{#required}}<sup>*</sup>{{/required}}</label>
+		<textarea id="{{name}}" class="{{inputClass}}" name="{{name}}" {{#rows}}rows={{rows}}{{/rows}} {{#disabled}}disabled="disabled"{{/disabled}} {{#placeholder}}placeholder="{{placeholder}}"{{/placeholder}}>{{value}}</textarea>
+	{{/isTextarea}}
+
+	{{#isSelect}}
+		<label for="{{name}}">{{title}}{{#required}}<sup>*</sup>{{/required}}</label>
+		<select name="{{name}}" class="{{inputClass}}" {{#multiple}}multiple="multiple" size="{{size}}"{{/multiple}} {{#disabled}}disabled="disabled"{{/disabled}}>
+			{{#options}}
+			<option value="{{value}}" {{#default}}selected="selected"{{/default}}>{{value}}</option>
+			{{/options}}
+		</select>
+	{{/isSelect}}
+
+	{{#isCheckbox}}
+		{{#inRow}}
+			<label class="title-holder">&nbsp;</label>
+		{{/inRow}}
+		<label for="{{name}}" class="pure-checkbox">
+			<input id="{{name}}" type="checkbox" name="{{name}}" value="{{value}}" {{#checked}}checked="checked"{{/checked}} {{#disabled}}disabled="disabled"{{/disabled}}> {{title}}{{#required}}<sup>*</sup>{{/required}}
+		</label>
+	{{/isCheckbox}}
+
+
+	{{^isRadio}}
+		<span class="pure-form-message error-message">{{title}}</span>
+	{{/isRadio}}
+
+	{{#isRadio}}
+		<label for="{{name}}">{{title}}{{#required}}<sup>*</sup>{{/required}}</label>
+		<span class="pure-form-message error-message">{{title}}</span>
+		{{#options}}					
+			<label class="pure-radio">
+				<input type="radio" name="{{name}}" value="{{value}}" {{#checked}}checked="checked"{{/checked}} {{#disabled}}disabled="disabled"{{/disabled}}> {{title}}
+			</label>
+		{{/options}}
+	{{/isRadio}}
+
+</div>
